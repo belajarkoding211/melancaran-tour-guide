@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login User - Melancaran</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="hero">
+  <div class="container">
+
+    <div class="logo">
+      MELANCARAN
+      <small>Online Bali Tour</small>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a href="index.html">BERANDA</a>
+      <a href="destinations.html">LOKASI</a>
+      <a href="guides.html">GUIDE</a>
+      <a href="contact.html">KONTAK</a>
+
+      <!-- DROPDOWN LOGIN -->
+      <div class="dropdown">
+        <a href="#" class="active">LOGIN</a>
+        <div class="dropdown-content">
+          <a href="login-user.html">Login User</a>
+          <a href="login-admin.html">Login Admin</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM LOGIN -->
+    <div class="form-box">
+      <h2>Login User</h2>
+
+      <input type="email" id="email" placeholder="Masukkan Email">
+      <input type="password" id="password" placeholder="Masukkan Password">
+
+      <button onclick="loginUser()">Login</button>
+
+      <p>
+        Belum punya akun?
+        <a href="register.html" style="color:orange; font-weight:bold;">Register</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      ©copyright MELANCARAN - Online Bali Tour
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+ 

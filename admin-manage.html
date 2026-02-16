@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelola Data - Admin Melancaran</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="checkRole('admin'); adminLoadDestinations(); adminLoadGuides();">
+
+<div class="hero">
+  <div class="container">
+
+    <div class="logo">
+      MELANCARAN
+      <small>Admin Panel</small>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar" id="navArea"></div>
+
+    <!-- HEADER -->
+    <div class="content-box">
+      <h1>Kelola Data Website</h1>
+      <p>
+        Tambahkan destinasi wisata baru dan guide lokal Bali yang bisa dihubungi langsung melalui WhatsApp.
+      </p>
+    </div>
+
+    <!-- SECTION DESTINATIONS -->
+    <h2 class="section-title">Kelola Destinasi Wisata</h2>
+
+    <div class="manage-grid">
+
+      <!-- FORM ADD DEST -->
+      <div class="manage-box">
+        <h3>Tambah Destinasi</h3>
+
+        <input type="text" id="destName" placeholder="Nama Destinasi (contoh: Pantai Sanur)">
+        <input type="text" id="destImage" placeholder="Nama File / Link Gambar (contoh: sanur.jpg)">
+
+        <button class="btn" onclick="addDestination()">Tambah Destinasi</button>
+
+        <p class="hint">
+          📌 Gunakan nama file gambar jika sudah diupload ke GitHub (contoh: sanur.jpg).<br>
+          Bisa juga pakai link URL gambar.
+        </p>
+      </div>
+
+      <!-- LIST DEST -->
+      <div class="manage-box">
+        <h3>Daftar Destinasi</h3>
+        <div class="scroll-container" id="adminDestinationList"></div>
+      </div>
+
+    </div>
+
+    <!-- SECTION GUIDES -->
+    <h2 class="section-title">Kelola Local Guides</h2>
+
+    <div class="manage-grid">
+
+      <!-- FORM ADD GUIDE -->
+      <div class="manage-box">
+        <h3>Tambah Guide</h3>
+
+        <input type="text" id="guideName" placeholder="Nama Guide">
+        <input type="text" id="guideLocation" placeholder="Lokasi Guide (contoh: Ubud)">
+        <input type="text" id="guideSpecialization" placeholder="Spesialisasi (contoh: Tour Budaya)">
+        <input type="text" id="guideLanguage" placeholder="Bahasa (contoh: Indonesia, English)">
+        <input type="text" id="guideExperience" placeholder="Pengalaman (contoh: 5 tahun)">
+        <input type="text" id="guideWhatsapp" placeholder="Nomor WA (contoh: 6281234567890)">
+
+        <button class="btn" onclick="addGuide()">Tambah Guide</button>
+
+        <p class="hint">
+          ⚠️ Nomor WhatsApp harus format internasional (contoh: 628xxxx).
+        </p>
+      </div>
+
+      <!-- LIST GUIDE -->
+      <div class="manage-box">
+        <h3>Daftar Guide</h3>
+        <div class="scroll-container" id="adminGuideList"></div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      ©copyright MELANCARAN - Online Bali Tour
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
